@@ -8,64 +8,79 @@ import utilities.Driver;
 public class InstructorFor_Student {
 
     public InstructorFor_Student(){PageFactory.initElements(Driver.getDriver(),this);}
-
+    // cookies "Accept"
     @FindBy (xpath = "//*[text()='Accept']")
     public WebElement acceptButton;
 
+    // Home page > Login
     @FindBy (xpath="//a[text()='Log in']")
     public WebElement loginLink;
 
+    //Home Page > Log in > Email box
     @FindBy (xpath = "//input[@id='login-email']")
     public WebElement emailBox;
 
+    //Home Page > Log in > Password box
     @FindBy(xpath = "//input[@id='login-password']")
     public WebElement passwordBox;
 
+    //Home Page > Log in > Login
     @FindBy (xpath = "//button[@class='btn red radius-5 mt-4 w-100']")
     public WebElement loginButton;
 
+    //Home Page > Categories
     @FindBy (xpath = "//i[@class='fas fa-bars text-16px']")
    public WebElement categories;
 
+    //Home Page > Categories > IT & Software
+    @FindBy (xpath = "//*[text()='IT & Software']")
+    public WebElement itSoftware;
+
+    //Home Page > Categories > IT & Software
+    @FindBy (xpath = "//*[text()='AWS Certification']")
+    public  WebElement AWSCertification;
+
+    //Home Page > Categories > IT & Software > 'Ultimate AWS Certified Solutions Architect Associate SAA-C03'
+    @FindBy (xpath = "//img[@src='https://qualitydemy.com/uploads/thumbnails/course_thumbnails/optimized/course_thumbnail_default_14.jpg']")
+    public WebElement  AssociateSAAC03;
+
+    //Home Page > Categories > Web Design Course
     @FindBy (xpath = "(//a[@class='py-2 text-wrap d-flex'])[1]")
     public WebElement categoriWebDesing;
 
+    //Home Page > Categories > Web Design Course > Web Design for Web Developers
     @FindBy (xpath = "//*[text()='Web Design for Web Developers']")
     public WebElement webDevelopers;
 
-    @FindBy (xpath = "(//a[@href='https://mycoursedemy.com/home/course/react-and-typescript/2'])[1]") //*[text()='React and Typescript']
+    //Home Page > Categories > Web Design Course > Web Design for Web Developers > React and Typescript
+    @FindBy (xpath = "//img[@src='https://qualitydemy.com/uploads/thumbnails/course_thumbnails/optimized/course_thumbnail_default_21667056963.jpg']")  //(//*[text()='React and Typescript'])[2]
     public WebElement reactAndTypescriptCourse;
 
-    @FindBy (xpath = "//img[@src='https://mycoursedemy.com/uploads/thumbnails/course_thumbnails/optimized/course_thumbnail_default_11666767872.jpg']")
-    public WebElement webDevelopersCourse;
-
+    //Home Page > Categories > English Course
     @FindBy (xpath = "//*[text()='English Course']")
     public WebElement categoriEnglish;
-
-    @FindBy(xpath = "//*[text()='English Speaking Course']")
-    public WebElement englishSpeaking;
-
-    @FindBy(xpath = "//img[@src='https://mycoursedemy.com/uploads/thumbnails/course_thumbnails/optimized/course_thumbnail_default_41666766506.jpg']")
-    public WebElement englishSpeakinCourse;
 
     @FindBy (xpath = "//button[@class='btn btn-add-wishlist ']")  //button[@id='2']
     public WebElement addWishButton;
 
-    @FindBy (xpath = "//img[@src='https://mycoursedemy.com/uploads/system/fd79007ee013b28e2fb902d4ae4575ff.png']")
-    public WebElement homePage;
 
-
+    //Home Page >> Heart
    @FindBy (xpath = "(//i[@class='far fa-heart'])[1]")
     public WebElement heartButton;
 
+    //Home Page >> Heart >> Go to WishList
     @FindBy (xpath = "//*[text()='Go to wishlist']")
-    public WebElement wistListButton;
+    public WebElement goToWistListButton;
 
-    @FindBy (xpath = "(//button[@class='btn-compare-sm float-end'])[1]") //button[@class='btn-compare-sm float-end']
-    public  WebElement compareLink;
+    //Home Page >> Heart >> Go to WishList >> Course 'React and Typescript' compare link
+    @FindBy (xpath = "(//button[@class='btn-compare-sm float-end'])")
+    public WebElement myWishListCompare1;
+
 
     @FindBy (xpath = "//li[@class='breadcrumb-item active text-light display-6 fw-bold']")
     public WebElement courseCompare;
+
+
 
     @FindBy (xpath = "(//*[text()='React and Typescript'])[2]")
     public WebElement nameCourse;
@@ -73,8 +88,26 @@ public class InstructorFor_Student {
     @FindBy (xpath = "//input[@placeholder='Search my wishlist']")
     public WebElement searchMyWishlist;
 
-    @FindBy (xpath = "(//a[@href='https://mycoursedemy.com/home/instructor_page/1'])[1]")
-    public WebElement instrocturIcon;
+    //Home Page >> Heart >> Go to MywishList >> SearchBox
+    @FindBy (xpath = "(//*[text()='React and Typescript'])[2]")
+    public WebElement reactAndTypescriptText;
+
+    //Home Page >> User Test
+    @FindBy (xpath = "(//img[@src='https://qualitydemy.com/uploads/user_image/placeholder.png'])[1]")
+    public WebElement userTestButton;
+
+    //Home Page >> User Test >> Logg out
+    @FindBy (xpath = "//*[text()=' Log out']")
+    public WebElement loggOutButton;
+
+    @FindBy (xpath = "//a[@class='text-14px fw-600 text-decoration-none']")
+    public WebElement ReactandTypescriptinstrocturIcon;
+
+    @FindBy (xpath = "(//*[text()='Admin User'])[3]")
+    public WebElement ReactandTypescriptinstrocturIconName;
+
+    @FindBy (xpath = "//img[@src='https://qualitydemy.com/uploads/system/393645bf994114c23be28028a47a77a0.png']")
+    public WebElement homePage;
 
     @FindBy (xpath = "//i[@class='far fa-file-video']")
     public WebElement durationCourse;
