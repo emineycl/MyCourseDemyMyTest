@@ -62,7 +62,7 @@ public class Us_12 {
         qualityDemyPage_User.courseComparePageChooseButton2SAA.click();
         ReusableMethods.wait(2);
 
-}
+    }
     @Test
     public void learnMoreTest(){
       // -When to learn more link is clicked, it should redirect to the page of the relevant course
@@ -78,18 +78,22 @@ public class Us_12 {
 
         actions.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN)
                 .sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).perform();
+        ReusableMethods.wait(3);
 
-        actions.moveToElement(qualityDemyPage_User.reactandTypescriptinsLearnMoreLink).click();    //learn more sayfasina gitmiyor
+        qualityDemyPage_User.reactandTypescriptinsLearnMoreLink.click();
 
-        ReusableMethods.wait(5);
+        ReusableMethods.wait(2);
 
         String expectedCourseName= "React and Typescript";
         String actualCourseName=qualityDemyPage_User.reactAndTypescriptText.getText();
         Assert.assertTrue(actualCourseName.contains(expectedCourseName));
-}
+    }
     @Test
     public void buyNowTest(){
-      actions.moveToElement(qualityDemyPage_User.categories).perform();
+
+       // -When the buy now button is clicked, it should redirect to the shopping_cart page
+
+        actions.moveToElement(qualityDemyPage_User.categories).perform();
         actions.moveToElement(qualityDemyPage_User.categoriWebDesing).perform();
         actions.moveToElement(qualityDemyPage_User.webDevelopers).click().perform();
 
@@ -113,8 +117,7 @@ public class Us_12 {
     }
     @AfterClass
     public void tearDown(){
-        actions.moveToElement(qualityDemyPage_User.userTestButton).perform();
-        actions.moveToElement(qualityDemyPage_User.loggOutButton).click().perform();
+
         Driver.closeDriver();
     }
 

@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Class Calistirma" >
+    <test name="Class Test">
+        <classes>
+            <class name="tests.Us_11"></class>
+            <class name="tests.Us_12"></class>
+            <class name="tests.Us_14"></class>
+        </classes>
+    </test>
+</suite>
+       

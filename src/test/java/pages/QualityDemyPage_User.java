@@ -90,8 +90,9 @@ public class QualityDemyPage_User {
     public WebElement courseComparePageChooseButton2SAA;
     //Home Page > Categories > Web Design Course > Web Design for Web Developers
     // > React and Typescriptins compare link > learn more link
-    @FindBy (xpath = "//*[text()='Learn more '] ")
+    @FindBy (xpath = "//*[text()='Learn more ']")
     public WebElement reactandTypescriptinsLearnMoreLink;
+    //------------------------US_14--------------------------------------------------------------
     //Home Page > Categories > Web Design Course > Wordpress
     @FindBy (xpath = "    //img[@src='https://qualitydemy.com/uploads/thumbnails/course_thumbnails/optimized/course_thumbnail_default_31666766582.jpg']\n")
     public WebElement wordpressButton;
@@ -101,6 +102,22 @@ public class QualityDemyPage_User {
     //Home Page > Categories > Web Design Course > Wordpress > Buy now > Shopping Buy text
     @FindBy(xpath = "//li[@class='breadcrumb-item active text-light display-6 fw-bold']")
     public WebElement shoppingBuyPage;
+    // Home Page > Test User > Purchase history
+    @FindBy (xpath = "//*[text()='Purchase history']")
+    public WebElement purchaseHistoryButton;
+    //Home Page > Test User > Purchase history > Invoice Button
+    @FindBy (xpath = "//*[text()='Invoice']")
+    public  WebElement invoiceButton;
+    //Home Page > Test User > Purchase history > Invoice Button > 'INVOICE' text
+    @FindBy (xpath = "//h1[@class='page-title py-5 text-white print-hidden']")
+    public WebElement invoiceText;
+    //Home Page > Test User > Purchase history >  Disney Magic English
+    @FindBy (xpath = "//a[@class='purchase-history-course-title']")
+    public WebElement   disneyMagicEnglish;
+    //Home Page > Test User > Purchase history >  Disney Magic English > Disney Magic English page
+    @FindBy (xpath = "//div[@class='course-header-wrap']")
+    public WebElement disneyMagicEnglishPage;
+
 
 
 

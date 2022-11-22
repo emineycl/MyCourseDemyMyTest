@@ -64,11 +64,12 @@ public class Us_11 {
         qualityDemyPage_User.searchMyWishlist.sendKeys("React and Typescript" + Keys.ENTER);
         actions.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN)
                 .sendKeys(Keys.ARROW_DOWN).perform();
-        String expectedCourseName= "React and Typescript";
+      String expectedCourseName= "React and Typescript";
         String actualCourseName=qualityDemyPage_User.reactAndTypescriptText.getText();
-        softAssert.assertTrue(actualCourseName.contains(expectedCourseName));
-        ReusableMethods.wait(3); }
+       Assert.assertTrue(actualCourseName.contains(expectedCourseName));
+        ReusableMethods.wait(3);
 
+    }
     @Test
     public void courseNameTest(){
 
@@ -101,10 +102,10 @@ public class Us_11 {
 
         String expectedUrl="https://qualitydemy.com/home/instructor_page/1";
         String actualUrl=Driver.getDriver().getCurrentUrl();
-        softAssert.assertEquals(actualUrl,expectedUrl);
+       Assert.assertEquals(actualUrl,expectedUrl);
     }
     @Test
-    public void courseNumberDurationTest(){
+    public void courseLessonDurationTest(){
 
         // -The course should be able to verify the number
         // and duration of the course on the relevant page when the course name is clicked.
@@ -116,14 +117,14 @@ public class Us_11 {
 
         actions.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN)
                 .sendKeys(Keys.ARROW_DOWN).perform();
-
+        ReusableMethods.wait(2);
         qualityDemyPage_User.reactAndTypescriptText.click();
 
         ReusableMethods.wait(2);
 
         String expectedNumberVerify="12 Lessons";
         String actualNumberVerify=qualityDemyPage_User.numberCourse.getText();
-        softAssert.assertTrue(actualNumberVerify.contains(expectedNumberVerify));
+        Assert.assertTrue(actualNumberVerify.contains(expectedNumberVerify));
 
         ReusableMethods.wait(2);
 
@@ -134,8 +135,7 @@ public class Us_11 {
     }
     @AfterClass
     public void tearDown(){
-        actions.moveToElement(qualityDemyPage_User.userTestButton).perform();
-        actions.moveToElement(qualityDemyPage_User.loggOutButton).click().perform();
+
        Driver.closeDriver();
     }
 }
