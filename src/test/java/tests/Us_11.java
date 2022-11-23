@@ -51,6 +51,7 @@ public class Us_11 {
         String expectedCourseCompare="                Course compare            ";
         String actualCourseCompare=qualityDemyPage_User.courseComparePage.getText();
         Assert.assertTrue(expectedCourseCompare.contains(actualCourseCompare));
+
     }
     @Test
     public void wishlistSearcBoxTesti(){
@@ -115,10 +116,19 @@ public class Us_11 {
         actions.moveToElement(qualityDemyPage_User.heartButton).perform();
         qualityDemyPage_User.goToWistListButton.click();
 
-        actions.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN)
-                .sendKeys(Keys.ARROW_DOWN).perform();
+       /* actions.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN)
+                .sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN)
+                .sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).perform();  */
+
         ReusableMethods.wait(2);
+
         qualityDemyPage_User.reactAndTypescriptText.click();
+
+        actions.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN)
+                .sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN)
+                .sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN)
+                .sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN)
+                .sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).perform();
 
         ReusableMethods.wait(2);
 
@@ -128,9 +138,10 @@ public class Us_11 {
 
         ReusableMethods.wait(2);
 
-        String expectedLessonDuration= "                    38:45:16 Hours On demand videos                  ";
+        String expectedLessonDuration="38:45:16 Hours";
         String actualLessonDuration=qualityDemyPage_User.durationCourse.getText();
-        softAssert.assertTrue(actualLessonDuration.contains(expectedLessonDuration));
+      Assert.assertTrue(actualLessonDuration.contains(expectedLessonDuration));
+
 
     }
     @AfterClass

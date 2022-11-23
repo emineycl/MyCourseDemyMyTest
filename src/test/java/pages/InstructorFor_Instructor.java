@@ -33,28 +33,28 @@ public class InstructorFor_Instructor {
     //Home Page > Categories > Web Design Course
     @FindBy (xpath = "(//a[@class='py-2 text-wrap d-flex'])[1]")
     public WebElement categoriWebDesing;
-    //Home Page > Categories > Web Design Course > Web Design for Web Developers
-    @FindBy (xpath = "//*[text()='Web Design for Web Developers']")
-    public WebElement webDevelopers;
-    //Home Page > Categories > Web Design Course > Web Design for Web Developers > Wordpress
-    @FindBy(xpath = "//img[@src='https://qualitydemy.com/uploads/thumbnails/course_thumbnails/optimized/course_thumbnail_default_31666766582.jpg']")
-    public WebElement wordpresslink;
-    //Home Page > Categories > Web Design Course > Wordpress > Buy now
+    //Home Page > Categories > Web Design Course > HTML5 and CSS
+    @FindBy (xpath = "(//*[text()='HTML5 and CSS'])[1]")
+    public WebElement HTMLandCSS;
+    //Home Page > Categories > Web Design Course > Web Design for Web Developers > Build Responsive Real-World Websites with HTML and CSS
+    @FindBy(xpath = "//img[@src='https://qualitydemy.com/uploads/thumbnails/course_thumbnails/optimized/course_thumbnail_default_12.jpg']")
+    public WebElement buildResponsiRealWorldHTMLandCSSlink;
+    //Home Page > Categories > Web Design Course > Build Responsive Real-World Websites with HTML and CSS > Buy now
     @FindBy (xpath = "//*[text()='Buy now']")
-    public WebElement wordpressBuyNow;
+    public WebElement courseBuyNow;
     //Home Page > Shopping
     @FindBy(xpath = "(//a[@href='https://qualitydemy.com/home/shopping_cart'])[1]")
     public WebElement shoppingButton;
     //Home Page > Shopping > checkout
     @FindBy (xpath = "//button[@class='btn red w-100 radius-10 mb-3']")
     public WebElement checkoutButton;
-    //Home Page > Shopping >  'Wordpress' course > checkout > stripe
+    //Home Page > Shopping >  'Build Responsive Real-World Websites with HTML and CSS' course > checkout > stripe
     @FindBy (xpath = "//img[@class='payment-gateway-icon']")
     public WebElement stripeButoon;
-    //Home Page > Shopping >  'Wordpress' course > checkout > stripe > payWithStripe
+    //Home Page > Shopping >  'Build Responsive Real-World Websites with HTML and CSS' course > checkout > stripe > payWithStripe
     @FindBy (xpath = "//button[@class='stripe-button payment-button float-end']")
     public WebElement payWithStripe;
-    //Home Page > Shopping >  'Wordpress' course > checkout > close button
+    //Home Page > Shopping >  'Build Responsive Real-World Websites with HTML and CSS' course > checkout > close button
     @FindBy (xpath = "//i[@class='fa fa-times']")
     public WebElement closeButton;
     //Home Page > Shopping Card Page
@@ -81,5 +81,15 @@ public class InstructorFor_Instructor {
     //Home Page > Shopping Card Page > Checkout sprite Page
     @FindBy (xpath = "//*[text()='Sweden']")
     public WebElement countrySweden;
+    // Home Page > MyCourses
+    @FindBy(xpath = "(//*[text()='My courses'])[1]")
+    public WebElement myCourses;
+    // Home Page > MyCourses > Wordpress
+    @FindBy (xpath = "//img[@src='https://qualitydemy.com/uploads/thumbnails/course_thumbnails/optimized/course_thumbnail_default_31666766582.jpg']")
+    public WebElement myCoursePageWordpres;
+    //
+    @FindBy(xpath = "//div[@class='SubmitButton-IconContainer']")
+    public WebElement payButton;
+
 
 }

@@ -47,16 +47,13 @@ public class US_39 {
 
         actions.moveToElement(instructorFor_Instructor.categories).perform();
         actions.moveToElement(instructorFor_Instructor.categoriWebDesing).perform();
-        actions.moveToElement(instructorFor_Instructor.webDevelopers).click().perform();
-
-        actions.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN)
-                .sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN)
-                .sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).perform();
+        actions.moveToElement(instructorFor_Instructor.HTMLandCSS).perform();
+        actions.moveToElement(instructorFor_Instructor.HTMLandCSS).click().perform();
 
         ReusableMethods.wait(3);
 
-        instructorFor_Instructor.wordpresslink.click();
-        instructorFor_Instructor.wordpressBuyNow.click();
+        instructorFor_Instructor.buildResponsiRealWorldHTMLandCSSlink.click();
+        instructorFor_Instructor.courseBuyNow.click();
 
         instructorFor_Instructor.checkoutButton.click();
         instructorFor_Instructor.stripeButoon.click();
@@ -72,7 +69,7 @@ public class US_39 {
 
         actions.moveToElement(instructorFor_Instructor.categories).perform();
         actions.moveToElement(instructorFor_Instructor.categoriWebDesing).perform();
-        actions.moveToElement(instructorFor_Instructor.webDevelopers).click().perform();
+        actions.moveToElement(instructorFor_Instructor.HTMLandCSS).click().perform();
 
         actions.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN)
                 .sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN)
@@ -80,8 +77,8 @@ public class US_39 {
 
         ReusableMethods.wait(3);
 
-        instructorFor_Instructor.wordpresslink.click();
-        instructorFor_Instructor.wordpressBuyNow.click();
+        instructorFor_Instructor.buildResponsiRealWorldHTMLandCSSlink.click();
+        instructorFor_Instructor.courseBuyNow.click();
 
         instructorFor_Instructor.checkoutButton.click();
         instructorFor_Instructor.stripeButoon.click();
@@ -102,7 +99,7 @@ public class US_39 {
 
         actions.moveToElement(instructorFor_Instructor.categories).perform();
         actions.moveToElement(instructorFor_Instructor.categoriWebDesing).perform();
-        actions.moveToElement(instructorFor_Instructor.webDevelopers).click().perform();
+        actions.moveToElement(instructorFor_Instructor.HTMLandCSS).click().perform();
 
         actions.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN)
                 .sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN)
@@ -110,8 +107,8 @@ public class US_39 {
 
         ReusableMethods.wait(3);
 
-        instructorFor_Instructor.wordpresslink.click();
-        instructorFor_Instructor.wordpressBuyNow.click();
+        instructorFor_Instructor.buildResponsiRealWorldHTMLandCSSlink.click();
+        instructorFor_Instructor.courseBuyNow.click();
 
         instructorFor_Instructor.checkoutButton.click();
         instructorFor_Instructor.stripeButoon.click();
@@ -126,7 +123,7 @@ public class US_39 {
 
         actions.moveToElement(instructorFor_Instructor.categories).perform();
         actions.moveToElement(instructorFor_Instructor.categoriWebDesing).perform();
-        actions.moveToElement(instructorFor_Instructor.webDevelopers).click().perform();
+        actions.moveToElement(instructorFor_Instructor.HTMLandCSS).click().perform();
 
         actions.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN)
                 .sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN)
@@ -134,8 +131,8 @@ public class US_39 {
 
         ReusableMethods.wait(3);
 
-        instructorFor_Instructor.wordpresslink.click();
-        instructorFor_Instructor.wordpressBuyNow.click();
+        instructorFor_Instructor.buildResponsiRealWorldHTMLandCSSlink.click();
+        instructorFor_Instructor.courseBuyNow.click();
 
         instructorFor_Instructor.checkoutButton.click();
         instructorFor_Instructor.stripeButoon.click();
@@ -149,22 +146,103 @@ public class US_39 {
         ReusableMethods.wait(2);
         instructorFor_Instructor.cardCVC.sendKeys("321" +Keys.ENTER);
         ReusableMethods.wait(2);
-        instructorFor_Instructor.nameOnCard.sendKeys("Abc Def");
+        instructorFor_Instructor.nameOnCard.sendKeys("Abc Def");  // +Keys.Enter yapmadim cunku satin alma islemi olmamasi icin
         ReusableMethods.wait(2);
       /*  actions.moveToElement(instructorFor_Instructor.countryName).perform();
         ReusableMethods.wait(2);
         actions.moveToElement(instructorFor_Instructor.countrySweden).click().perform();
         ReusableMethods.wait(2);  */
 
-        //Burada zatan Sweden secili oldugu icin hata veriyor
+        //Burada zatan Sweden otomatik secili oldugu icin hata veriyor. Yazdim ama yoruma aldim
 
-        Driver.closeDriver(); }
+         }
+         @Test
+         public void StripecheckoutKontrolTest(){
 
+          //   When the pay button is pressed, it should be checked that the necessary information has been filled.
+
+            actions.moveToElement(instructorFor_Instructor.categories).perform();
+             actions.moveToElement(instructorFor_Instructor.categoriWebDesing).perform();
+             actions.moveToElement(instructorFor_Instructor.HTMLandCSS).click().perform();
+
+             actions.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN)
+                     .sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN)
+                     .sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).perform();
+
+             ReusableMethods.wait(3);
+
+             instructorFor_Instructor.buildResponsiRealWorldHTMLandCSSlink.click();
+             instructorFor_Instructor.courseBuyNow.click();
+
+             instructorFor_Instructor.checkoutButton.click();
+             instructorFor_Instructor.stripeButoon.click();
+             instructorFor_Instructor.payWithStripe.click();
+
+             instructorFor_Instructor.checkoutEmail.sendKeys("user_1106335@login.com" + Keys.ENTER);
+             ReusableMethods.wait(2);
+             instructorFor_Instructor.cardNummer.sendKeys("4242424242424242" +Keys.ENTER);
+             ReusableMethods.wait(2);
+             instructorFor_Instructor.expDatum.sendKeys("1225" +Keys.ENTER);
+             ReusableMethods.wait(2);
+             instructorFor_Instructor.cardCVC.sendKeys("321" +Keys.ENTER);
+             ReusableMethods.wait(2);
+             instructorFor_Instructor.nameOnCard.sendKeys("Abc Def");
+             ReusableMethods.wait(2);
+//bir önceki testin aynisi cunku bilgilerin doldurulduguna dair bir test olmadigindan tekrar sendkeys ile gönderdim
+
+         }
+         @Test
+         public void tickTest(){
+             actions.moveToElement(instructorFor_Instructor.categories).perform();
+             actions.moveToElement(instructorFor_Instructor.categoriWebDesing).perform();
+             actions.moveToElement(instructorFor_Instructor.HTMLandCSS).click().perform();
+
+             actions.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN)
+                     .sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN)
+                     .sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).perform();
+
+             ReusableMethods.wait(3);
+
+             instructorFor_Instructor.buildResponsiRealWorldHTMLandCSSlink.click();
+             instructorFor_Instructor.courseBuyNow.click();
+
+             instructorFor_Instructor.checkoutButton.click();
+             instructorFor_Instructor.stripeButoon.click();
+             instructorFor_Instructor.payWithStripe.click();
+
+             instructorFor_Instructor.checkoutEmail.sendKeys("user_1106335@login.com" + Keys.ENTER);
+             ReusableMethods.wait(2);
+             instructorFor_Instructor.cardNummer.sendKeys("4242424242424242" +Keys.ENTER);
+             ReusableMethods.wait(2);
+             instructorFor_Instructor.expDatum.sendKeys("1225" +Keys.ENTER);
+             ReusableMethods.wait(2);
+             instructorFor_Instructor.cardCVC.sendKeys("321" +Keys.ENTER);
+             ReusableMethods.wait(2);
+             instructorFor_Instructor.nameOnCard.sendKeys("Abc Def" );
+             ReusableMethods.wait(2);
+
+          /*   instructorFor_Instructor.payButton.click();  */
+             // yorumda kalmali cunku satin alma islemi yapildiktan sonra testler tekrar calismiyor
+
+
+         }
+
+         @Test
+         public void shoppingTest(){
+
+        //-Course purchased after payment should be displayed on my_courses page
+
+        ReusableMethods.wait(5);
+
+        instructorFor_Instructor.myCourses.click();
+
+        Assert.assertTrue(instructorFor_Instructor.myCoursePageWordpres.isDisplayed());
+         }
 
 
     @AfterClass
     public void tearDown(){
 
-        Driver.closeDriver();
+       // Driver.closeDriver();
     }
 }

@@ -51,7 +51,7 @@ public class QualityDemyPage_User {
     @FindBy (xpath = "//a[@class='text-14px fw-600 text-decoration-none']")
     public WebElement ReactandTypescriptinstrocturIcon;
     //Home Page > Heart > Go to MywishList > React and Typescriptins >  38:45:16 Hours On demand videos
-    @FindBy (xpath = "//i[@class='far fa-file-video']")
+    @FindBy (xpath = "(//span[@class='total-time'])[1]")
     public WebElement durationCourse;
     //Home Page > Heart > Go to MywishList > React and Typescriptins > 12 Lessons
     @FindBy (xpath = "//*[text()='12 Lessons']")
