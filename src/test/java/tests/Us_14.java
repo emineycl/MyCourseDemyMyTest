@@ -31,7 +31,7 @@ public class Us_14 {
         qualityDemyPage_User.loginButton.click();
     }
     @Test
-    public void invoiceTest(){
+    public void US14_TC01(){
 
         // -When the invoice button is clicked, it should redirect to the invoice page.
         
@@ -49,7 +49,7 @@ public class Us_14 {
 
     }
         @Test
-        public void courseNameTest(){
+        public void US14_TC02(){
 
         // -When the course name is clicked, it should redirect to the page of the relevant course.
 

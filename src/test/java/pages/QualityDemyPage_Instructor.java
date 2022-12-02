@@ -5,9 +5,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class InstructorFor_Instructor {
+public class QualityDemyPage_Instructor {
 
-    public InstructorFor_Instructor(){
+    public QualityDemyPage_Instructor(){
         PageFactory.initElements(Driver.getDriver(),this);}
     // Home page > Log in
     @FindBy(xpath = "//a[text()='Log in']")

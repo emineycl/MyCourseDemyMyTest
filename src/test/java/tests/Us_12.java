@@ -36,7 +36,7 @@ public class Us_12 {
     }
 
     @Test
-    public void dropboxCourseTest(){
+    public void US12_TC01(){
 
       //  -Courses should be searchable from dropboxes
 
@@ -64,7 +64,7 @@ public class Us_12 {
 
     }
     @Test
-    public void learnMoreTest(){
+    public void US12_TC02(){
       // -When to learn more link is clicked, it should redirect to the page of the relevant course
 
         actions.moveToElement(qualityDemyPage_User.categories).perform();
@@ -89,7 +89,7 @@ public class Us_12 {
         Assert.assertTrue(actualCourseName.contains(expectedCourseName));
     }
     @Test
-    public void buyNowTest(){
+    public void US12_TC03(){
 
        // -When the buy now button is clicked, it should redirect to the shopping_cart page
 

@@ -6,8 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
-import pages.InstructorFor_Instructor;
+import pages.QualityDemyPage_Instructor;
 
 import utilities.ConfigReader;
 import utilities.Driver;
@@ -25,51 +24,51 @@ public class US_39 {
 -If the required information is filled when the pay button is clicked, a tick should appear on the pay button and then it should redirect to my_courses page.
 -course purchased after payment should be displayed on my_courses page
      */
-    InstructorFor_Instructor instructorFor_Instructor=new InstructorFor_Instructor();
+    QualityDemyPage_Instructor qualityDemyPage_Instructor=new QualityDemyPage_Instructor();
     Actions actions=new Actions(Driver.getDriver());
 
 
     @BeforeClass
     public void setUp(){
         Driver.getDriver().get(ConfigReader.getProperty("myUrl"));
-        instructorFor_Instructor.acceptCookies.click();
-        instructorFor_Instructor.loginLink.click();
-        instructorFor_Instructor.emailBox.sendKeys(ConfigReader.getProperty("myStudentEmail3"));
-        instructorFor_Instructor.passwordBox.sendKeys(ConfigReader.getProperty("myStudentPassword3"));
-        instructorFor_Instructor.loginButton.click();
+        qualityDemyPage_Instructor.acceptCookies.click();
+        qualityDemyPage_Instructor.loginLink.click();
+        qualityDemyPage_Instructor.emailBox.sendKeys(ConfigReader.getProperty("myGecerliEmailInsBora2"));
+        qualityDemyPage_Instructor.passwordBox.sendKeys(ConfigReader.getProperty("myGecerliPasswordInsBora2"));
+        qualityDemyPage_Instructor.loginButton.click();
     }
 
     @Test
-    public void stripeLogoTest(){
+    public void US_39_TC01(){
 
         //-The pay with stripe button should be visible after clicking the stripe logo
 
 
-        actions.moveToElement(instructorFor_Instructor.categories).perform();
-        actions.moveToElement(instructorFor_Instructor.categoriWebDesing).perform();
-        actions.moveToElement(instructorFor_Instructor.HTMLandCSS).perform();
-        actions.moveToElement(instructorFor_Instructor.HTMLandCSS).click().perform();
+        actions.moveToElement(qualityDemyPage_Instructor.categories).perform();
+        actions.moveToElement(qualityDemyPage_Instructor.categoriWebDesing).perform();
+        actions.moveToElement(qualityDemyPage_Instructor.HTMLandCSS).perform();
+        actions.moveToElement(qualityDemyPage_Instructor.HTMLandCSS).click().perform();
 
         ReusableMethods.wait(3);
 
-        instructorFor_Instructor.buildResponsiRealWorldHTMLandCSSlink.click();
-        instructorFor_Instructor.courseBuyNow.click();
+        qualityDemyPage_Instructor.buildResponsiRealWorldHTMLandCSSlink.click();
+        qualityDemyPage_Instructor.courseBuyNow.click();
 
-        instructorFor_Instructor.checkoutButton.click();
-        instructorFor_Instructor.stripeButoon.click();
+        qualityDemyPage_Instructor.checkoutButton.click();
+        qualityDemyPage_Instructor.stripeButoon.click();
 
-        Assert.assertTrue(instructorFor_Instructor.payWithStripe.isDisplayed());
+        Assert.assertTrue(qualityDemyPage_Instructor.payWithStripe.isDisplayed());
 
     }
 
     @Test
-    public void stripeButtonTest(){
+    public void US_39_TC02(){
 
         // -When the pay with stripe button is clicked, it should redirect to checkout.stripe.com
 
-        actions.moveToElement(instructorFor_Instructor.categories).perform();
-        actions.moveToElement(instructorFor_Instructor.categoriWebDesing).perform();
-        actions.moveToElement(instructorFor_Instructor.HTMLandCSS).click().perform();
+        actions.moveToElement(qualityDemyPage_Instructor.categories).perform();
+        actions.moveToElement(qualityDemyPage_Instructor.categoriWebDesing).perform();
+        actions.moveToElement(qualityDemyPage_Instructor.HTMLandCSS).click().perform();
 
         actions.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN)
                 .sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN)
@@ -77,12 +76,12 @@ public class US_39 {
 
         ReusableMethods.wait(3);
 
-        instructorFor_Instructor.buildResponsiRealWorldHTMLandCSSlink.click();
-        instructorFor_Instructor.courseBuyNow.click();
+        qualityDemyPage_Instructor.buildResponsiRealWorldHTMLandCSSlink.click();
+        qualityDemyPage_Instructor.courseBuyNow.click();
 
-        instructorFor_Instructor.checkoutButton.click();
-        instructorFor_Instructor.stripeButoon.click();
-        instructorFor_Instructor.payWithStripe.click();
+        qualityDemyPage_Instructor.checkoutButton.click();
+        qualityDemyPage_Instructor.stripeButoon.click();
+        qualityDemyPage_Instructor.payWithStripe.click();
 
         ReusableMethods.wait(5);
 
@@ -93,13 +92,13 @@ public class US_39 {
 
     }
     @Test
-    public void shoppingCardPageTest(){
+    public void US_39_TC03(){
 
         //-When the close button is clicked, it should redirect to the shopping cart page.
 
-        actions.moveToElement(instructorFor_Instructor.categories).perform();
-        actions.moveToElement(instructorFor_Instructor.categoriWebDesing).perform();
-        actions.moveToElement(instructorFor_Instructor.HTMLandCSS).click().perform();
+        actions.moveToElement(qualityDemyPage_Instructor.categories).perform();
+        actions.moveToElement(qualityDemyPage_Instructor.categoriWebDesing).perform();
+        actions.moveToElement(qualityDemyPage_Instructor.HTMLandCSS).click().perform();
 
         actions.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN)
                 .sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN)
@@ -107,23 +106,23 @@ public class US_39 {
 
         ReusableMethods.wait(3);
 
-        instructorFor_Instructor.buildResponsiRealWorldHTMLandCSSlink.click();
-        instructorFor_Instructor.courseBuyNow.click();
+        qualityDemyPage_Instructor.buildResponsiRealWorldHTMLandCSSlink.click();
+        qualityDemyPage_Instructor.courseBuyNow.click();
 
-        instructorFor_Instructor.checkoutButton.click();
-        instructorFor_Instructor.stripeButoon.click();
-        instructorFor_Instructor.closeButton.click();
-        Assert.assertTrue(instructorFor_Instructor.shoppingCardPage.isDisplayed());
+        qualityDemyPage_Instructor.checkoutButton.click();
+        qualityDemyPage_Instructor.stripeButoon.click();
+        qualityDemyPage_Instructor.closeButton.click();
+        Assert.assertTrue(qualityDemyPage_Instructor.shoppingCardPage.isDisplayed());
     }
     @Test
-    public void StripecheckoutTest(){
+    public void US_39_TC04(){
 
         //-E-mail, card information, country information should be filled in appropriately on checkout.stripe.com page
 
 
-        actions.moveToElement(instructorFor_Instructor.categories).perform();
-        actions.moveToElement(instructorFor_Instructor.categoriWebDesing).perform();
-        actions.moveToElement(instructorFor_Instructor.HTMLandCSS).click().perform();
+        actions.moveToElement(qualityDemyPage_Instructor.categories).perform();
+        actions.moveToElement(qualityDemyPage_Instructor.categoriWebDesing).perform();
+        actions.moveToElement(qualityDemyPage_Instructor.HTMLandCSS).click().perform();
 
         actions.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN)
                 .sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN)
@@ -131,22 +130,22 @@ public class US_39 {
 
         ReusableMethods.wait(3);
 
-        instructorFor_Instructor.buildResponsiRealWorldHTMLandCSSlink.click();
-        instructorFor_Instructor.courseBuyNow.click();
+        qualityDemyPage_Instructor.buildResponsiRealWorldHTMLandCSSlink.click();
+        qualityDemyPage_Instructor.courseBuyNow.click();
 
-        instructorFor_Instructor.checkoutButton.click();
-        instructorFor_Instructor.stripeButoon.click();
-        instructorFor_Instructor.payWithStripe.click();
+        qualityDemyPage_Instructor.checkoutButton.click();
+        qualityDemyPage_Instructor.stripeButoon.click();
+        qualityDemyPage_Instructor.payWithStripe.click();
 
-        instructorFor_Instructor.checkoutEmail.sendKeys("user_1106335@login.com" + Keys.ENTER);
+        qualityDemyPage_Instructor.checkoutEmail.sendKeys("user_1106335@login.com" + Keys.ENTER);
         ReusableMethods.wait(2);
-        instructorFor_Instructor.cardNummer.sendKeys("4242424242424242" +Keys.ENTER);
+        qualityDemyPage_Instructor.cardNummer.sendKeys("4242424242424242" +Keys.ENTER);
         ReusableMethods.wait(2);
-        instructorFor_Instructor.expDatum.sendKeys("1225" +Keys.ENTER);
+        qualityDemyPage_Instructor.expDatum.sendKeys("1225" +Keys.ENTER);
         ReusableMethods.wait(2);
-        instructorFor_Instructor.cardCVC.sendKeys("321" +Keys.ENTER);
+        qualityDemyPage_Instructor.cardCVC.sendKeys("321" +Keys.ENTER);
         ReusableMethods.wait(2);
-        instructorFor_Instructor.nameOnCard.sendKeys("Abc Def");  // +Keys.Enter yapmadim cunku satin alma islemi olmamasi icin
+        qualityDemyPage_Instructor.nameOnCard.sendKeys("Abc Def");  // +Keys.Enter yapmadim cunku satin alma islemi olmamasi icin
         ReusableMethods.wait(2);
       /*  actions.moveToElement(instructorFor_Instructor.countryName).perform();
         ReusableMethods.wait(2);
@@ -157,13 +156,13 @@ public class US_39 {
 
          }
          @Test
-         public void StripecheckoutKontrolTest(){
+         public void US_39_TC05(){
 
           //   When the pay button is pressed, it should be checked that the necessary information has been filled.
 
-            actions.moveToElement(instructorFor_Instructor.categories).perform();
-             actions.moveToElement(instructorFor_Instructor.categoriWebDesing).perform();
-             actions.moveToElement(instructorFor_Instructor.HTMLandCSS).click().perform();
+            actions.moveToElement(qualityDemyPage_Instructor.categories).perform();
+             actions.moveToElement(qualityDemyPage_Instructor.categoriWebDesing).perform();
+             actions.moveToElement(qualityDemyPage_Instructor.HTMLandCSS).click().perform();
 
              actions.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN)
                      .sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN)
@@ -171,31 +170,31 @@ public class US_39 {
 
              ReusableMethods.wait(3);
 
-             instructorFor_Instructor.buildResponsiRealWorldHTMLandCSSlink.click();
-             instructorFor_Instructor.courseBuyNow.click();
+             qualityDemyPage_Instructor.buildResponsiRealWorldHTMLandCSSlink.click();
+             qualityDemyPage_Instructor.courseBuyNow.click();
 
-             instructorFor_Instructor.checkoutButton.click();
-             instructorFor_Instructor.stripeButoon.click();
-             instructorFor_Instructor.payWithStripe.click();
+             qualityDemyPage_Instructor.checkoutButton.click();
+             qualityDemyPage_Instructor.stripeButoon.click();
+             qualityDemyPage_Instructor.payWithStripe.click();
 
-             instructorFor_Instructor.checkoutEmail.sendKeys("user_1106335@login.com" + Keys.ENTER);
+             qualityDemyPage_Instructor.checkoutEmail.sendKeys("user_1106335@login.com" + Keys.ENTER);
              ReusableMethods.wait(2);
-             instructorFor_Instructor.cardNummer.sendKeys("4242424242424242" +Keys.ENTER);
+             qualityDemyPage_Instructor.cardNummer.sendKeys("4242424242424242" +Keys.ENTER);
              ReusableMethods.wait(2);
-             instructorFor_Instructor.expDatum.sendKeys("1225" +Keys.ENTER);
+             qualityDemyPage_Instructor.expDatum.sendKeys("1225" +Keys.ENTER);
              ReusableMethods.wait(2);
-             instructorFor_Instructor.cardCVC.sendKeys("321" +Keys.ENTER);
+             qualityDemyPage_Instructor.cardCVC.sendKeys("321" +Keys.ENTER);
              ReusableMethods.wait(2);
-             instructorFor_Instructor.nameOnCard.sendKeys("Abc Def");
+             qualityDemyPage_Instructor.nameOnCard.sendKeys("Abc Def");
              ReusableMethods.wait(2);
 //bir önceki testin aynisi cunku bilgilerin doldurulduguna dair bir test olmadigindan tekrar sendkeys ile gönderdim
 
          }
          @Test
-         public void tickTest(){
-             actions.moveToElement(instructorFor_Instructor.categories).perform();
-             actions.moveToElement(instructorFor_Instructor.categoriWebDesing).perform();
-             actions.moveToElement(instructorFor_Instructor.HTMLandCSS).click().perform();
+         public void US_39_TC06(){
+             actions.moveToElement(qualityDemyPage_Instructor.categories).perform();
+             actions.moveToElement(qualityDemyPage_Instructor.categoriWebDesing).perform();
+             actions.moveToElement(qualityDemyPage_Instructor.HTMLandCSS).click().perform();
 
              actions.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN)
                      .sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN)
@@ -203,22 +202,22 @@ public class US_39 {
 
              ReusableMethods.wait(3);
 
-             instructorFor_Instructor.buildResponsiRealWorldHTMLandCSSlink.click();
-             instructorFor_Instructor.courseBuyNow.click();
+             qualityDemyPage_Instructor.buildResponsiRealWorldHTMLandCSSlink.click();
+             qualityDemyPage_Instructor.courseBuyNow.click();
 
-             instructorFor_Instructor.checkoutButton.click();
-             instructorFor_Instructor.stripeButoon.click();
-             instructorFor_Instructor.payWithStripe.click();
+             qualityDemyPage_Instructor.checkoutButton.click();
+             qualityDemyPage_Instructor.stripeButoon.click();
+             qualityDemyPage_Instructor.payWithStripe.click();
 
-             instructorFor_Instructor.checkoutEmail.sendKeys("user_1106335@login.com" + Keys.ENTER);
+             qualityDemyPage_Instructor.checkoutEmail.sendKeys("user_1106335@login.com" + Keys.ENTER);
              ReusableMethods.wait(2);
-             instructorFor_Instructor.cardNummer.sendKeys("4242424242424242" +Keys.ENTER);
+             qualityDemyPage_Instructor.cardNummer.sendKeys("4242424242424242" +Keys.ENTER);
              ReusableMethods.wait(2);
-             instructorFor_Instructor.expDatum.sendKeys("1225" +Keys.ENTER);
+             qualityDemyPage_Instructor.expDatum.sendKeys("1225" +Keys.ENTER);
              ReusableMethods.wait(2);
-             instructorFor_Instructor.cardCVC.sendKeys("321" +Keys.ENTER);
+             qualityDemyPage_Instructor.cardCVC.sendKeys("321" +Keys.ENTER);
              ReusableMethods.wait(2);
-             instructorFor_Instructor.nameOnCard.sendKeys("Abc Def" );
+             qualityDemyPage_Instructor.nameOnCard.sendKeys("Abc Def" );
              ReusableMethods.wait(2);
 
           /*   instructorFor_Instructor.payButton.click();  */
@@ -228,21 +227,21 @@ public class US_39 {
          }
 
          @Test
-         public void shoppingTest(){
+         public void US_39_TC07(){
 
         //-Course purchased after payment should be displayed on my_courses page
 
         ReusableMethods.wait(5);
 
-        instructorFor_Instructor.myCourses.click();
+        qualityDemyPage_Instructor.myCourses.click();
 
-        Assert.assertTrue(instructorFor_Instructor.myCoursePageWordpres.isDisplayed());
+        Assert.assertTrue(qualityDemyPage_Instructor.myCoursePageWordpres.isDisplayed());
          }
 
 
     @AfterClass
     public void tearDown(){
 
-       // Driver.closeDriver();
+     Driver.closeDriver();
     }
 }

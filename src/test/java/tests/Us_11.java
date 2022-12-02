@@ -4,7 +4,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.*;
-import org.testng.asserts.SoftAssert;
+
 import pages.QualityDemyPage_User;
 import utilities.ConfigReader;
 import utilities.Driver;
@@ -25,7 +25,7 @@ public class Us_11 {
 
     QualityDemyPage_User qualityDemyPage_User=new QualityDemyPage_User();
     Actions actions=new Actions(Driver.getDriver());
-    SoftAssert softAssert=new SoftAssert();
+
    @BeforeClass
    public void setUp(){
        Driver.getDriver().get(ConfigReader.getProperty("myUrl"));
@@ -37,7 +37,7 @@ public class Us_11 {
    }
 
     @Test
-    public void wishListCompareTest(){
+    public void US11_TC01(){
 
         //-When the compare link is clicked, it should redirect to the Course compare page
         ReusableMethods.wait(5);
@@ -54,7 +54,7 @@ public class Us_11 {
 
     }
     @Test
-    public void wishlistSearcBoxTesti(){
+    public void US11_TC02(){
 
         //  -Course should be able to get selected from the search box
 
@@ -66,13 +66,15 @@ public class Us_11 {
         actions.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN)
                 .sendKeys(Keys.ARROW_DOWN).perform();
       String expectedCourseName= "React and Typescript";
+      ReusableMethods.wait(2);
         String actualCourseName=qualityDemyPage_User.reactAndTypescriptText.getText();
+        ReusableMethods.wait(2);
        Assert.assertTrue(actualCourseName.contains(expectedCourseName));
         ReusableMethods.wait(3);
 
     }
     @Test
-    public void courseNameTest(){
+    public void US11_TC03(){
 
         //  -When the course name is clicked, it should redirect to the page of the relevant course.
 
@@ -88,7 +90,7 @@ public class Us_11 {
 
     }
     @Test
-    public void instructorPageTest(){
+    public void US11_TC04(){
 
        // -When the instructor icon is clicked, it should redirect to the relevant instructor page.
 
@@ -106,7 +108,7 @@ public class Us_11 {
        Assert.assertEquals(actualUrl,expectedUrl);
     }
     @Test
-    public void courseLessonDurationTest(){
+    public void US11_TC05(){
 
         // -The course should be able to verify the number
         // and duration of the course on the relevant page when the course name is clicked.
@@ -115,10 +117,6 @@ public class Us_11 {
         qualityDemyPage_User.homePage.click();
         actions.moveToElement(qualityDemyPage_User.heartButton).perform();
         qualityDemyPage_User.goToWistListButton.click();
-
-       /* actions.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN)
-                .sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN)
-                .sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).perform();  */
 
         ReusableMethods.wait(2);
 
